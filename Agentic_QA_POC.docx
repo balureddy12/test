@@ -21,33 +21,38 @@ Recommended Repository Structure
 
 agentic-qa-poc/
 │
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── Dockerfile
-├── backend/
-│   ├── src/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   │   ├── nlpService.js
-│   │   │   ├── automationService.js
-│   │   │   ├── validationService.js
-│   │   │   └── reportingService.js
-│   ├── package.json
-│   └── Dockerfile
-├── automation/
-│   ├── runTest.js
-│   ├── helpers/
-│   └── Dockerfile
-├── n8n/
-│   ├── agentic-qa-workflow.json
-│   └── README.md
-├── docker-compose.yml
-├── README.md
-├── .gitignore
-└── docs/
-    └── architecture.png
+├── frontend/               # React.js or Vue.js app for user input and results
+│   ├── src/                # Source code for UI components and logic
+│   ├── public/             # Static assets (index.html, icons, etc.)
+│   ├── package.json        # Frontend dependencies and scripts
+│   └── Dockerfile          # Container setup for frontend deployment
+│
+├── backend/                # Node.js (Express) API, orchestration, NLP integration
+│   ├── src/                # Backend source code
+│   │   ├── routes/         # API route handlers (test case submission, result queries)
+│   │   ├── services/       # Business logic modules
+│   │   │   ├── nlpService.js         # NLP/AI logic to parse plain-English test cases
+│   │   │   ├── automationService.js  # Triggers browser automation scripts
+│   │   │   ├── validationService.js  # Validates test results (pass/fail logic)
+│   │   │   └── reportingService.js   # Handles reporting (email, Slack, dashboard)
+│   ├── package.json        # Backend dependencies and scripts
+│   └── Dockerfile          # Container setup for backend deployment
+│
+├── automation/             # Selenium/Playwright scripts for browser automation
+│   ├── runTest.js          # Main script to execute UI test actions
+│   ├── helpers/            # Utility functions for automation
+│   └── Dockerfile          # Container setup for automation agent
+│
+├── n8n/                    # N8N workflow definitions for process automation
+│   ├── agentic-qa-workflow.json  # N8N workflow config (connects API, automation, validation, reporting)
+│   └── README.md           # Documentation for workflow setup and usage
+│
+├── docker-compose.yml      # Compose file to orchestrate all services
+├── README.md               # Project overview, setup instructions, architecture explanation
+├── .gitignore              # Files and folders to exclude from version control
+│
+└── docs/                   # Documentation and diagrams
+    └── architecture.png    # System architecture diagram
 
 Component Explanations
 
