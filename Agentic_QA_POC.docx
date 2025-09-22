@@ -1,7 +1,8 @@
 Agentic QA Autonomous Regression Tester – POC Document
 
 Overview
-Agentic QA is an autonomous regression testing solution for websites. It leverages AI and automation tools to interpret plain-English test cases, execute browser actions, validate results, and report outcomes—reducing manual QA effort and enabling faster releases.
+Agentic QA is an autonomous regression testing solution for websites. It leverages AI and automation tools to interpret plain-English test cases, 
+execute browser actions, validate results, and report outcomes—reducing manual QA effort and enabling faster releases.
 
 Component Table
 
