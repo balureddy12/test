@@ -3,6 +3,43 @@ Agentic QA Autonomous Regression Tester – POC Document
 Overview
 Agentic QA is an autonomous regression testing solution for websites. It leverages AI and automation tools to interpret plain-English test cases, 
 execute browser actions, validate results, and report outcomes—reducing manual QA effort and enabling faster releases.
++----------------------------+
+|  User Inputs Test Case     |
+| "Navigate to login page    |
+|  and check password field" |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|  NLP Module Parses Input   |
+| Action: Navigate           |
+| Target: Login page         |
+| Validation: Pwd field      |
+|            visible         |
++-------------+--------------+
+              |
+              v
++----------------------------+
+| Automation Agent Executes  |
+| - Opens browser            |
+| - Navigates to login page  |
+| - Checks password field    |
++-------------+--------------+
+              |
+              v
++----------------------------+
+| Validation Module Checks   |
+| - Is password field        |
+|   visible?                 |
+| - Pass/Fail                |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|  Result is Reported        |
+| - UI Dashboard             |
+| - Email/Slack              |
++----------------------------+
 
 Component Table
 
